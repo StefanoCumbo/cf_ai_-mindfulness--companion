@@ -15,7 +15,16 @@ const requestHandler = createRequestHandler(
 );
 
 export default {
-	fetch(request, env, ctx) {
+	async fetch(request, env, ctx) {
+		const url = new URL(request.url);
+		
+		// Handle /reflect endpoint
+		if (url.pathname === '/reflect' && request.method === 'POST') {
+			const { handleReflect } = await import('./reflect');
+			return handleReflect(request, env, ctx);
+		}
+		
+		// Handle React Router app
 		return requestHandler(request, {
 			cloudflare: { env, ctx },
 		});

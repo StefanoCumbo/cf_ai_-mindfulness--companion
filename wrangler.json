@@ -10,5 +10,14 @@
 	"upload_source_maps": true,
 	"vars": {
 		"VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare"
-	}
+	},
+	"ai": {
+		"binding": "AI"
+	},
+	"kv_namespaces": [
+		{
+			"binding": "REFLECTIONS",
+			"id": "38edb32745054ba6b155f3f59b1eb051"
+		}
+	]
 }

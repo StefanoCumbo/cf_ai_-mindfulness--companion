@@ -1,0 +1,104 @@
+.journal-container {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.journal-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.journal-textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.6;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.journal-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.journal-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.journal-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: center;
+}
+
+.journal-button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.journal-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.journal-response {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  border-left: 4px solid #2563eb;
+}
+
+.journal-response h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.journal-response p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.journal-response p:last-child {
+  margin-bottom: 0;
+}
+
+.journal-response strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.back-button {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.5rem;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.back-button:hover {
+  color: #2563eb;
+}

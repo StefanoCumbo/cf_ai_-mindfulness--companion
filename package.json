@@ -14,10 +14,12 @@
 		"publish": true
 	},
 	"dependencies": {
+		"axios": "^1.13.2",
 		"isbot": "5.1.32",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
-		"react-router": "7.9.6"
+		"react-router": "7.9.6",
+		"react-router-dom": "^7.11.0"
 	},
 	"devDependencies": {
 		"@cloudflare/vite-plugin": "1.15.3",
@@ -26,7 +28,6 @@
 		"@types/node": "24.10.1",
 		"@types/react": "^19.0.0",
 		"@types/react-dom": "^19.0.0",
-		"tailwindcss": "4.1.17",
 		"typescript": "5.9.3",
 		"vite": "^6.0.0",
 		"vite-tsconfig-paths": "5.1.4",
