@@ -10,6 +10,7 @@ export default function Journal() {
 
     const handleSubmit = async () => {
         setLoading(true);
+        setEntry("");
         try {
             const res = axios.post("/reflect", {entry});
             setResponse((await res).data);
@@ -40,9 +41,9 @@ export default function Journal() {
                 {response && (
                     <div className="journal-response">
                         <h2>AI Reflection</h2>
-                        <p><strong>Prompt:</strong> {response.prompt}</p>
-                        <p><strong>Insight:</strong> {response.insight}</p>
-                        <p><strong>Follow-up:</strong> {response.followUp}</p>
+                        <p> {response.prompt}</p>
+                        <p> {response.insight}</p>
+                        <p> {response.followUp}</p>
                     </div>
                 )}
             </div>
