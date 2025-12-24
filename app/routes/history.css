@@ -1,0 +1,63 @@
+.history-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.history-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.no-entries {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+.reflections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reflection-card {
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  border-left: 4px solid #2563eb;
+}
+
+.reflection-date {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.reflection-prompt {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.reflection-insight {
+  line-height: 1.6;
+  color: #374151;
+}
+
+.back-button {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.5rem;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.back-button:hover {
+  color: #2563eb;
+}

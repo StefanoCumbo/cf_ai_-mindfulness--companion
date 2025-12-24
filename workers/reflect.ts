@@ -4,7 +4,6 @@ export async function handleReflect(
 	ctx: ExecutionContext
 ): Promise<Response> {
 	try {
-		// Parse the journal entry from request
 		const { entry } = await request.json() as { entry: string };
 		
 		if (!entry) {
@@ -14,7 +13,7 @@ export async function handleReflect(
 			);
 		}
 		
-		// Call Llama 3.3 for mindfulness insights
+		// Call Llama 3.3 
 		const aiResponse = await env.AI.run('@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
 			messages: [
 				{
@@ -28,14 +27,16 @@ export async function handleReflect(
 			]
 		});
 		
-		// Structure the response
 		const reflection = {
 			prompt: entry,
 			insight: aiResponse.response || 'Thank you for sharing your thoughts.',
-			followUp: 'How does reflecting on this make you feel?'
+			followUp: 'How does reflecting on this make you feel?',
+			timestamp: Date.now()
 		};
 		
 		
+		const entryId = `entry-${reflection.timestamp}`;
+		await env.REFLECTIONS.put(entryId, JSON.stringify(reflection));
 		
 		return Response.json(reflection);
 		
